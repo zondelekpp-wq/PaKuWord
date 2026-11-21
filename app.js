@@ -314,17 +314,24 @@ function installBar(){
 function vToday(){
   const st=owlState(),cl=cLang();
   const msg={hi:t('hi'),happy:t('happy'),sleepy:t('sleepy')}[st];
-  let h=`<div class="mascot"><button class="avbtn" data-act="ov" data-v="avatar" aria-label="${esc(t('s_buddy'))}: ${esc(avName(S.avatar||'unicorn'))}">${owl(st)}</button><div class="bubble">${esc(msg)}</div></div>`;
-  if(cl!==S.lang) h+=`<p class="note">${esc(t('fallback'))}</p>`;
-  if(!S.today.ids.length) return h+`<div class="empty">${esc(t('allDone'))}</div>`;
-  S.today.ids.forEach(id=>{h+=card(id);});
-  const allRev=S.today.ids.every(id=>S.today.rev.includes(id));
-  if(allRev){
-    const can=pack(cl).some(e=>okE(e)&&!S.learned[e.id]&&!S.today.ids.includes(e.id));
-    h+=can?`<button class="btn more-btn" data-act="more">＋ ${esc(t('oneMore'))}</button>`:`<div class="empty">${esc(t('allDone'))}</div>`;
+  const pet=`<div class="mascot"><button class="avbtn" data-act="ov" data-v="avatar" aria-label="${esc(t('s_buddy'))}: ${esc(avName(S.avatar||'unicorn'))}">${owl(st)}</button><div class="bubble">${esc(msg)}</div></div>`;
+  let main='';
+  if(cl!==S.lang) main+=`<p class="note">${esc(t('fallback'))}</p>`;
+  if(!S.today.ids.length) main+=`<div class="empty">${esc(t('allDone'))}</div>`;
+  else{
+    S.today.ids.forEach(id=>{main+=card(id);});
+    if(S.today.ids.every(id=>S.today.rev.includes(id))){
+      const can=pack(cl).some(e=>okE(e)&&!S.learned[e.id]&&!S.today.ids.includes(e.id));
+      main+=can?`<button class="btn more-btn" data-act="more">＋ ${esc(t('oneMore'))}</button>`:`<div class="empty">${esc(t('allDone'))}</div>`;
+    }
   }
-  h+=`<p class="count">${esc(t('todayCount',{n:S.today.rev.length}))} · ${esc(t('learnedN',{n:wordsN()}))}</p>`;
-  return h+famShortcuts();
+  const due=dueList().length;
+  let info=`<p class="count">${esc(t('todayCount',{n:S.today.rev.length}))} · ${esc(t('learnedN',{n:wordsN()}))}</p>`;
+  info+=`<div class="side-extra">`;
+  if(S.earned<=TOTAL) info+=`<button class="panel" data-act="view" data-v="journey"><b>${svg('road')} ${esc(t('journey'))}</b><div class="bar"><i style="width:${Math.round(S.steps/S.stageLen*100)}%"></i></div><small>${esc(t('stepOf',{n:S.steps,len:S.stageLen}))}</small></button>`;
+  info+=`<button class="panel" data-act="view" data-v="review"><b>${svg('loop')} ${esc(t('review'))}</b><small>${esc(due?t('reviewDue',{n:due}):t('reviewNone'))}</small></button></div>`;
+  info+=famShortcuts();
+  return `<div class="today-grid"><div class="tg-pet">${pet}</div><div class="tg-main">${main}</div><div class="tg-info">${info}</div></div>`;
 }
 function txt(e){return S.junior&&e.jl?{s:e.js,l:e.jl,x:e.jx}:{s:e.s,l:e.l,x:e.x};}
 function cardBody(e,fresh){

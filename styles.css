@@ -1,6 +1,6 @@
 /* PaKuWord – styles */
 :root{--acc:#5B4BC4;--gold:#D9A43A;--red:#D7263D;--r:18px;
- --bg:#FBF7EF;--fg:#1F2440;--muted:#6B6F86;--card:#FFFFFF;--line:#E7E1D3;--soft:#F2EDE2;--shadow:0 6px 22px rgba(31,36,64,.10)}
+ --bg:#EEE8FB;--fg:#1F2440;--muted:#615F80;--card:#FFFFFF;--line:#DCD3F3;--soft:#E5DDF8;--shadow:0 6px 22px rgba(31,36,64,.10)}
 .theme-dark{--bg:#14152A;--fg:#ECEAF6;--muted:#A7A8C4;--card:#1F2140;--line:#2F3260;--soft:#262850;--shadow:0 6px 22px rgba(0,0,0,.35)}
 *{box-sizing:border-box}
 html,body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans",sans-serif;-webkit-tap-highlight-color:transparent}
@@ -332,3 +332,56 @@ input[type=color]{width:40px;height:40px;border:0;background:none;padding:0}
 .anim-full .owl-happy .av-spark,.anim-calm .owl-happy .av-spark{animation:twinkle 1.6s ease-in-out 3}
 .anim-off .av-spark,.owl-happy .av-spark{opacity:1}
 .anim-full .owl-happy .av-spark{opacity:0}
+
+/* ===== layout: today grid (phone: stacked) ===== */
+.today-grid{display:grid;grid-template-columns:minmax(0,1fr);grid-template-areas:"pet" "main" "info"}
+.tg-pet{grid-area:pet}.tg-main{grid-area:main;min-width:0}.tg-info{grid-area:info}
+.side-extra{display:none}
+.panel{display:flex;flex-direction:column;gap:8px;width:100%;text-align:left;border:0;background:var(--card);border-radius:18px;padding:14px 16px;margin:0 0 12px;box-shadow:var(--shadow);color:var(--fg)}
+.panel b{display:flex;align-items:center;gap:8px}.panel small{color:var(--muted)}
+.panel .bar{background:var(--soft)}
+/* ===== tablet portrait & up ===== */
+@media (min-width:700px){
+ html,body{font-size:17.5px}
+ #app{max-width:860px;padding-left:12px;padding-right:12px}
+ .top{padding:18px 20px 10px}
+ .logo{width:46px;height:46px;font-size:1.45rem}
+ .ibtn{width:48px;height:48px}
+ .view{padding:8px 24px 24px}
+ .flipper{height:340px}
+ .term{font-size:2.15rem}
+ .junior .term{font-size:2.4rem}
+ .mascot .avbtn .owl{width:104px}
+ .bubble{font-size:1.05rem;padding:12px 18px}
+ .gal{grid-template-columns:repeat(auto-fill,minmax(132px,1fr));gap:14px}
+ .gcard{min-height:150px}.gi{width:62px;height:62px}.gi .ic{width:34px;height:34px}
+ .badge{width:84px;height:84px}
+ .tabs .ic{width:26px;height:26px}.tab{font-size:.82rem;max-width:160px}
+ .sheet{left:50%;right:auto;top:50%;bottom:auto;width:min(700px,92vw);max-height:86vh;border-radius:26px;transform:translate(-50%,-50%);animation:fade .25s}
+ .avgrid{grid-template-columns:repeat(5,1fr)}
+ .cats{grid-template-columns:1fr 1fr 1fr}
+ .st{min-height:76px}.node{width:54px;height:54px;margin-top:-27px}.st.l .node{right:-27px}.st.r .node{left:-27px}
+ .toast{bottom:100px}
+}
+/* ===== tablet landscape / large: side navigation + two columns ===== */
+@media (min-width:1000px){
+ #app{max-width:1280px;padding-left:120px;padding-bottom:28px}
+ .tabs{top:0;bottom:0;left:0;right:auto;width:104px;flex-direction:column;justify-content:center;gap:6px;border-top:0;border-right:1px solid var(--line);padding:20px 10px}
+ .tab{flex:none;max-width:none;padding:14px 4px;font-size:.8rem}
+ .tab .dot{right:18%}
+ .today-grid{grid-template-columns:minmax(0,1fr) 360px;grid-template-areas:"main pet" "main info";gap:0 32px;align-items:start}
+ .tg-pet .mascot{flex-direction:column;text-align:center;gap:10px;margin:8px 0 18px}
+ .tg-pet .mascot .avbtn .owl{width:170px}
+ .tg-pet .bubble{border-radius:18px}
+ .side-extra{display:block}
+ .tg-info .count{text-align:left}
+ .tg-info .famrow{justify-content:flex-start}
+ .flipper{height:380px}
+ .wcard{padding:26px 28px}
+ .jr,.view-review>*,.view-library>*{max-width:860px;margin-left:auto;margin-right:auto}
+ .view-gallery{max-width:1100px;margin:0 auto}
+ .gal{grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}
+ .avgrid{grid-template-columns:repeat(5,1fr)}
+ .toast{bottom:28px}
+ .install{margin-left:20px;margin-right:20px}
+}

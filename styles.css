@@ -302,3 +302,20 @@ input[type=color]{width:40px;height:40px;border:0;background:none;padding:0}
 .fa-t{flex:1;display:flex;flex-direction:column;gap:4px}.fa-t small{color:var(--muted)}
 .fa-t .chip{align-self:flex-start}.fa-sw{justify-content:space-between;font-size:.85rem}
 .famapp .btn{flex:none}
+
+/* brain-unicorn mascot */
+.uni-body{fill:#FF8FAB}.uni-arm{fill:#F27A9B}.uni-lobe{fill:none;stroke:#E0567E;stroke-width:2;stroke-linecap:round}
+.uni-cheek{fill:#FF5C8A;opacity:.35}.uni-brow{fill:none;stroke:#C9426B;stroke-width:2.2;stroke-linecap:round}
+.uni-smile{fill:none;stroke:#7A2445;stroke-width:2.4;stroke-linecap:round}
+.uni .owl-pupil{fill:#2B1B3A}.uni .owl-eyes-c path{stroke:#7A2445}
+.uni .owl-feet{stroke:#E0567E}
+.uni-spark{fill:#F6C65B;opacity:0}
+.uni .owl-wr{transform-origin:78px 74px}
+.uni-horn{transform-box:fill-box;transform-origin:50% 100%}
+.anim-full .owl-happy .uni-spark,.anim-calm .owl-happy .uni-spark{animation:twinkle 1.6s ease-in-out 3}
+.anim-full .owl-happy .uni-horn{animation:hornGlow 1.6s ease-in-out 3}
+.owl-happy .uni-smile{stroke-width:2.8}
+.owl-sleepy .uni-brow{transform:translateY(2px)}
+.owl-sleepy .uni-horn{transform:rotate(-10deg)}
+@keyframes twinkle{0%,100%{opacity:0;transform:scale(.6)}50%{opacity:1;transform:scale(1)}}
+@keyframes hornGlow{50%{filter:drop-shadow(0 0 5px #FFD86B)}}

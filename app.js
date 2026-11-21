@@ -90,24 +90,28 @@ const IC={
 };
 const svg=(n,c)=>`<svg class="ic ${c||''}" viewBox="0 0 24 24" aria-hidden="true">${IC[n]||IC.star}</svg>`;
 
-/* ---------- mascot: an owl with a maple leaf (original PaKu character) ---------- */
-function owl(state){return `<svg class="owl owl-${state}" viewBox="0 0 100 112" aria-hidden="true">
+/* ---------- mascot: a cheerful brain-unicorn, cousin of Honicorn (original PaKu character) ---------- */
+function owl(state){return `<svg class="owl uni owl-${state}" viewBox="0 0 100 112" aria-hidden="true">
  <g class="owl-b">
-  <path class="owl-wl" d="M20 58c-10 6-12 22-4 32 4-8 8-16 8-26z"/>
-  <path class="owl-wr" d="M80 58c10 6 12 22 4 32-4-8-8-16-8-26z"/>
-  <path class="owl-body" d="M50 20C24 20 16 44 18 70c2 24 16 34 32 34s30-10 32-34c2-26-6-50-32-50z"/>
-  <path class="owl-body" d="M28 26L22 11l16 11zM72 26l6-15-16 11z"/>
-  <ellipse class="owl-belly" cx="50" cy="78" rx="20" ry="19"/>
-  <path class="owl-feather" d="M42 72q4 4 8 0q4 4 8 0M42 82q4 4 8 0q4 4 8 0"/>
-  <g class="owl-eyes-o"><circle class="owl-eye" cx="37" cy="48" r="11"/><circle class="owl-eye" cx="63" cy="48" r="11"/>
-   <circle class="owl-pupil" cx="38" cy="49" r="5"/><circle class="owl-pupil" cx="62" cy="49" r="5"/>
-   <circle fill="#fff" cx="40" cy="47" r="1.6"/><circle fill="#fff" cx="64" cy="47" r="1.6"/></g>
-  <g class="owl-eyes-c"><path d="M28 49q9 6 18 0M54 49q9 6 18 0"/></g>
-  <path class="owl-beak" d="M46 56h8l-4 7z"/>
-  <path class="owl-feet" d="M40 103v5M44 103v5M56 103v5M60 103v5"/>
+  <ellipse class="uni-arm" cx="16" cy="80" rx="7" ry="10" transform="rotate(28 16 80)"/>
+  <g class="owl-wr"><ellipse class="uni-arm" cx="84" cy="80" rx="7" ry="10" transform="rotate(-28 84 80)"/></g>
+  <path class="owl-feet" d="M41 104v5M47 105v4M53 105v4M59 104v5"/>
+  <g class="uni-horn"><path d="M50 5L42.5 33Q50 36.5 57.5 33Z" fill="#F6C65B" stroke="#D99A2B" stroke-width="1.5" stroke-linejoin="round"/>
+   <path d="M44.6 26Q50 28.6 55.4 26M46.6 19Q50 21 53.4 19M48.3 12.4Q50 13.5 51.7 12.4" fill="none" stroke="#D99A2B" stroke-width="1.6" stroke-linecap="round"/></g>
+  <g class="uni-body"><circle cx="50" cy="44" r="15"/><circle cx="33" cy="50" r="14"/><circle cx="67" cy="50" r="14"/><circle cx="23" cy="66" r="14"/><circle cx="77" cy="66" r="14"/>
+   <circle cx="29" cy="85" r="14"/><circle cx="71" cy="85" r="14"/><circle cx="50" cy="91" r="15"/><circle cx="50" cy="68" r="27"/></g>
+  <path class="uni-lobe" d="M50 31Q46.5 39 51 46M26 57Q32.5 55 35 60.5M74 57Q67.5 55 65 60.5M20 75Q26 73 28.5 78.5M80 75Q74 73 71.5 78.5M35 93Q38 96 42 95.5M65 93Q62 96 58 95.5"/>
+  <ellipse class="uni-cheek" cx="31" cy="78" rx="5.5" ry="3.2"/><ellipse class="uni-cheek" cx="69" cy="78" rx="5.5" ry="3.2"/>
+  <path class="uni-brow" d="M31.5 53.5Q39 50 45.5 54M54.5 54Q61 50 68.5 53.5"/>
+  <g class="owl-eyes-o"><ellipse class="owl-eye" cx="39" cy="66" rx="8" ry="9"/><ellipse class="owl-eye" cx="61" cy="66" rx="8" ry="9"/>
+   <circle class="owl-pupil" cx="40" cy="67.5" r="4.6"/><circle class="owl-pupil" cx="60" cy="67.5" r="4.6"/>
+   <circle fill="#fff" cx="41.8" cy="65.6" r="1.6"/><circle fill="#fff" cx="61.8" cy="65.6" r="1.6"/></g>
+  <g class="owl-eyes-c"><path d="M31 67Q39 72.5 47 67M53 67Q61 72.5 69 67"/></g>
+  <path class="uni-smile" d="M43 81Q50 87.5 57 81"/>
  </g>
- <path class="owl-leaf" transform="translate(66 17) rotate(14) scale(1.05)" d="M0,-7.2 1.2,-4.6 2.6,-5.4 2.2,-1.4 4.4,-3.8 4.9,-2.6 7.4,-3.1 6.6,-0.6 7.6,-0.1 4.1,3.1 4.6,4.4 0.4,3.8 0.5,7.3 -0.5,7.3 -0.4,3.8 -4.6,4.4 -4.1,3.1 -7.6,-0.1 -6.6,-0.6 -7.4,-3.1 -4.9,-2.6 -4.4,-3.8 -2.2,-1.4 -2.6,-5.4 -1.2,-4.6z"/>
- <text class="owl-z" x="78" y="20">z</text><text class="owl-z z2" x="86" y="10">z</text>
+ <g transform="translate(61 36) rotate(20) scale(.78)"><path class="owl-leaf" d="M0,-7.2 1.2,-4.6 2.6,-5.4 2.2,-1.4 4.4,-3.8 4.9,-2.6 7.4,-3.1 6.6,-0.6 7.6,-0.1 4.1,3.1 4.6,4.4 0.4,3.8 0.5,7.3 -0.5,7.3 -0.4,3.8 -4.6,4.4 -4.1,3.1 -7.6,-0.1 -6.6,-0.6 -7.4,-3.1 -4.9,-2.6 -4.4,-3.8 -2.2,-1.4 -2.6,-5.4 -1.2,-4.6z"/></g>
+ <g class="uni-spark"><path d="M24 22l1.6 3.6 3.6 1.6-3.6 1.6L24 32.4l-1.6-3.6-3.6-1.6 3.6-1.6z"/><path d="M78 18l1.2 2.8 2.8 1.2-2.8 1.2L78 26l-1.2-2.8-2.8-1.2 2.8-1.2z"/></g>
+ <text class="owl-z" x="80" y="26">z</text><text class="owl-z z2" x="88" y="16">z</text>
 </svg>`;}
 function owlState(){
   const d=todayStr();

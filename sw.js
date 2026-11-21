@@ -1,6 +1,6 @@
 /* PaKuWord service worker – offline, monthly updates, optional daily reminder */
 importScripts('version.js','catalog.js');
-const BUILD=2; // raise for fixes between monthly releases
+const BUILD=3; // raise for fixes between monthly releases
 const CACHE='pakuword-'+self.PW_VERSION+'-'+BUILD;
 const CORE=['./','index.html','styles.css','app.js','i18n.js','categories.js','figures.js','family.js','version.js','catalog.js','manifest.webmanifest','icon-192.png','icon-512.png','icon-maskable.png','qr.png','qr.svg'];
 const FILES=CORE.concat(self.PW_FILES||[]);

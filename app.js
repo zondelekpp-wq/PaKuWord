@@ -532,6 +532,7 @@ function settingsBody(){
   const L=window.PW_LANGNAMES,cl=Object.keys(CATS()).filter(c=>pack(cLang()).some(e=>e.cat===c));
   const seg=(key,opts)=>`<div class="seg">${opts.map(([v,l])=>`<button class="${S[key]===v?'on':''}" data-act="set" data-k="${key}" data-v="${v}">${esc(l)}</button>`).join('')}</div>`;
   return `
+  <label class="jtile ${S.junior?'on':''}"><span class="jt-ic">🧒</span><span class="jt-t"><b>${esc(t('s_junior'))}</b><small>${esc(t('juniorHint'))}</small></span><span class="switch big"><input type="checkbox" ${S.junior?'checked':''} data-in="junior"><i></i></span></label>
   <div class="fld"><span>${esc(t('s_buddy'))}</span>${avatarPicker()}<small>${esc(t('buddyHint'))}</small></div>
   <label class="fld"><span>${esc(t('s_language'))}</span><select data-in="lang">${LANGS.map(l=>`<option value="${l}" ${S.lang===l?'selected':''}>${L[l]}</option>`).join('')}</select></label>
   <label class="fld"><span>${esc(t('s_learn'))}</span><select data-in="learn"><option value="off">${esc(t('off'))}</option>${LANGS.filter(l=>l!==S.lang).map(l=>`<option value="${l}" ${S.learn===l?'selected':''}>${L[l]}${window.PW_CONTENT[l]?'':' ('+esc(t('soon'))+')'}</option>`).join('')}</select></label>
@@ -543,7 +544,6 @@ function settingsBody(){
   <div class="fld"><span>${esc(t('s_voice'))}</span><div class="row"><span>${esc(t('s_autoread'))}</span><label class="switch"><input type="checkbox" ${S.autoread?'checked':''} data-in="autoread"><i></i></label></div><small>${esc(t('autoreadHint'))}</small>
     <span class="sub">${esc(t('s_rate'))}</span>${seg('rate',[['slow',t('slow')],['normal',t('normal')]])}</div>
   <div class="fld"><span>${esc(t('s_anim'))}</span>${seg('anim',[['full',t('animFull')],['calm',t('animCalm')],['off',t('animOff')]])}</div>
-  <div class="fld"><span>${esc(t('s_junior'))}</span><label class="switch"><input type="checkbox" ${S.junior?'checked':''} data-in="junior"><i></i></label><small>${esc(t('juniorHint'))}</small></div>
   <div class="fld"><span>${esc(t('s_theme'))}</span>${seg('theme',[['light',t('light')],['dark',t('dark')]])}</div>
   <div class="fld"><span>${esc(t('s_accent'))}</span><div class="sw">${ACCENTS.map(a=>`<button class="swatch ${S.accent===a?'on':''}" style="background:${a}" data-act="set" data-k="accent" data-v="${a}" aria-label="${a}"></button>`).join('')}<input type="color" value="${esc(S.accent)}" data-in="accent" aria-label="${esc(t('s_accent'))}"></div></div>
   <div class="fld"><button class="btn danger" data-act="reset">${esc(resetArm?t('resetAgain'):t('s_reset'))}</button></div>`;

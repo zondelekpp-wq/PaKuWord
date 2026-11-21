@@ -405,3 +405,9 @@ input[type=color]{width:40px;height:40px;border:0;background:none;padding:0}
 .junior .pl-b{height:60px;min-width:60px;font-size:1.05rem;border-radius:18px}
 .junior .pl-b .ic{width:28px;height:28px}
 .term .tw{display:inline-block;white-space:nowrap}
+/* Junior mode tile – first in Settings */
+.jtile{display:flex;align-items:center;gap:14px;background:linear-gradient(135deg,#FFF3C4,#FFE0EC 55%,#E6DDFF);border:2px solid transparent;border-radius:22px;padding:16px;margin:6px 0 8px;cursor:pointer;color:#1F2440;box-shadow:var(--shadow)}
+.jtile.on{border-color:var(--acc)}
+.jt-ic{font-size:2.2rem;line-height:1}
+.jt-t{flex:1;display:flex;flex-direction:column;gap:3px}.jt-t b{font-size:1.15rem}.jt-t small{color:#55597a;font-size:.84rem}
+.switch.big{width:62px;height:36px;flex:none}.switch.big i::after{width:30px;height:30px}.switch.big input:checked+i::after{left:29px}

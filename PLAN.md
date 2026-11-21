@@ -13,7 +13,7 @@
 6. Tick the domain below and add one line to the log. Commit and push to `dev`.
 
 ## Monthly release (1st day of the month)
-Merge `dev` into `main`, set `PW_VERSION` to the release date, write the newest `PW_CHANGES` entry in all 8 languages (new domains by name, number of new words, new biographies, fixes), validate, push `main`, merge `main` back into `dev`. Users see a “What’s new” screen once on their next visit (it can be read aloud).
+Merge `dev` into `main`, set `PW_VERSION` to the release date, write the newest `PW_CHANGES` entry in all 8 languages (new domains by name, number of new words, new biographies, fixes), validate, rebuild the download package with `python3 _build_zip.py`, push `main`, merge `main` back into `dev`. Users see a “What’s new” screen once on their next visit (it can be read aloud).
 
 ## Domain queue
 - [ ] his – History

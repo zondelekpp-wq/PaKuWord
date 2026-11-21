@@ -332,6 +332,7 @@ function render(){
   after();
 }
 function installBar(){
+  return ''; // the shared PaKu family install.js shows the install bar (and the way back to the PaKu launcher)
   if(standalone()) return '';
   if(deferredPrompt) return `<div class="install"><span>📲 PaKuWord</span><button class="btn small" data-act="install">${esc(t('install'))}</button></div>`;
   if(isIOS) return `<div class="install"><span>📲 ${esc(t('installIos'))}</span></div>`;
@@ -687,8 +688,6 @@ async function setupNotify(){
 }
 
 /* ---------- start ---------- */
-window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredPrompt=e;render();});
-window.addEventListener('appinstalled',()=>{deferredPrompt=null;render();});
 document.addEventListener('visibilitychange',()=>{if(!document.hidden&&S.today.date!==todayStr())render();});
 if('serviceWorker' in navigator&&location.protocol!=='file:'){
   const had=!!navigator.serviceWorker.controller;let reloaded=false;

@@ -411,3 +411,5 @@ input[type=color]{width:40px;height:40px;border:0;background:none;padding:0}
 .jt-ic{font-size:2.2rem;line-height:1}
 .jt-t{flex:1;display:flex;flex-direction:column;gap:3px}.jt-t b{font-size:1.15rem}.jt-t small{color:#55597a;font-size:.84rem}
 .switch.big{width:62px;height:36px;flex:none}.switch.big i::after{width:30px;height:30px}.switch.big input:checked+i::after{left:29px}
+/* shared PaKu install / back-to-launcher bar next to the tablet side navigation */
+@media (min-width:1000px){#pakuInstall,#pakuBack{margin-left:104px}}

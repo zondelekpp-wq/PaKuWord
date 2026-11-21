@@ -17,7 +17,7 @@ const FIGS=window.PW_FIG, TOTAL=FIGS.length; // 50 figures + "You" = 51 stages
 
 const DEF=()=>({lang:'en',learn:'off',mode:'random',cats:['med','law','gen','psy','biz'],stageLen:20,notify:'',
   anim:(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)?'calm':'full',junior:false,theme:'light',accent:'#5B4BC4',learned:{},days:[],steps:0,earned:0,lastStepDay:'',
-  today:{date:'',ids:[],rev:[]},cycle:[],lastCat:'',badges:[],fam:{},autoread:false,rate:'normal',seenVer:''});
+  today:{date:'',ids:[],rev:[]},cycle:[],lastCat:'',badges:[],fam:{},avatar:'unicorn',autoread:false,rate:'normal',seenVer:''});
 let S=load();
 let view='today', overlay=null, deferredPrompt=null, resetArm=false, rv=null, libQ='';
 const queue=[], openMore=new Set(), freshReveal=new Set();
@@ -91,7 +91,7 @@ const IC={
 const svg=(n,c)=>`<svg class="ic ${c||''}" viewBox="0 0 24 24" aria-hidden="true">${IC[n]||IC.star}</svg>`;
 
 /* ---------- mascot: a cheerful brain-unicorn, cousin of Honicorn (original PaKu character) ---------- */
-function owl(state){return `<svg class="owl uni owl-${state}" viewBox="0 0 100 112" aria-hidden="true">
+function uniSvg(state){return `<svg class="owl uni owl-${state}" viewBox="0 0 100 112" aria-hidden="true">
  <g class="owl-b">
   <ellipse class="uni-arm" cx="16" cy="80" rx="7" ry="10" transform="rotate(28 16 80)"/>
   <g class="owl-wr"><ellipse class="uni-arm" cx="84" cy="80" rx="7" ry="10" transform="rotate(-28 84 80)"/></g>
@@ -113,6 +113,37 @@ function owl(state){return `<svg class="owl uni owl-${state}" viewBox="0 0 100 1
  <g class="uni-spark"><path d="M24 22l1.6 3.6 3.6 1.6-3.6 1.6L24 32.4l-1.6-3.6-3.6-1.6 3.6-1.6z"/><path d="M78 18l1.2 2.8 2.8 1.2-2.8 1.2L78 26l-1.2-2.8-2.8-1.2 2.8-1.2z"/></g>
  <text class="owl-z" x="80" y="26">z</text><text class="owl-z z2" x="88" y="16">z</text>
 </svg>`;}
+function owlSvg(state){return `<svg class="owl owl-${state}" viewBox="0 0 100 112" aria-hidden="true">
+ <g class="owl-b">
+  <path class="owl-wl" d="M20 58c-10 6-12 22-4 32 4-8 8-16 8-26z"/>
+  <path class="owl-wr" d="M80 58c10 6 12 22 4 32-4-8-8-16-8-26z"/>
+  <path class="owl-body" d="M50 20C24 20 16 44 18 70c2 24 16 34 32 34s30-10 32-34c2-26-6-50-32-50z"/>
+  <path class="owl-body" d="M28 26L22 11l16 11zM72 26l6-15-16 11z"/>
+  <ellipse class="owl-belly" cx="50" cy="78" rx="20" ry="19"/>
+  <path class="owl-feather" d="M42 72q4 4 8 0q4 4 8 0M42 82q4 4 8 0q4 4 8 0"/>
+  <g class="owl-eyes-o"><circle class="owl-eye" cx="37" cy="48" r="11"/><circle class="owl-eye" cx="63" cy="48" r="11"/>
+   <circle class="owl-pupil" cx="38" cy="49" r="5"/><circle class="owl-pupil" cx="62" cy="49" r="5"/>
+   <circle fill="#fff" cx="40" cy="47" r="1.6"/><circle fill="#fff" cx="64" cy="47" r="1.6"/></g>
+  <g class="owl-eyes-c"><path d="M28 49q9 6 18 0M54 49q9 6 18 0"/></g>
+  <path class="owl-beak" d="M46 56h8l-4 7z"/>
+  <path class="owl-feet" d="M40 103v5M44 103v5M56 103v5M60 103v5"/>
+ </g>
+ <g transform="translate(66 17) rotate(14) scale(1.05)"><path class="owl-leaf" d="M0,-7.2 1.2,-4.6 2.6,-5.4 2.2,-1.4 4.4,-3.8 4.9,-2.6 7.4,-3.1 6.6,-0.6 7.6,-0.1 4.1,3.1 4.6,4.4 0.4,3.8 0.5,7.3 -0.5,7.3 -0.4,3.8 -4.6,4.4 -4.1,3.1 -7.6,-0.1 -6.6,-0.6 -7.4,-3.1 -4.9,-2.6 -4.4,-3.8 -2.2,-1.4 -2.6,-5.4 -1.2,-4.6z"/></g>
+ <text class="owl-z" x="78" y="20">z</text><text class="owl-z z2" x="86" y="10">z</text>
+</svg>`;}
+function owl(state){
+  const a=S.avatar||'unicorn';
+  if(a==='owl')return owlSvg(state);
+  const A=window.PW_AV_SVG;
+  if(A&&A[a]&&A[a][state])return A[a][state];
+  return uniSvg(state);
+}
+const avName=id=>{const n=(window.PW_AV_NAMES||{})[id];return n?(n[S.lang]||n.en):id;};
+function avatarPicker(){
+  return `<div class="avgrid">${(window.PW_AV_LIST||['unicorn','owl']).map(id=>{const cur=S.avatar||'unicorn';
+    const prev=S.avatar;S.avatar=id;const pic=owl('hi');S.avatar=prev;
+    return `<button class="avopt ${cur===id?'on':''}" data-act="avatar" data-v="${id}" aria-pressed="${cur===id}">${pic}<span>${esc(avName(id))}</span></button>`;}).join('')}</div>`;
+}
 function owlState(){
   const d=todayStr();
   if(S.today.date===d&&S.today.rev.length) return 'happy';
@@ -283,7 +314,7 @@ function installBar(){
 function vToday(){
   const st=owlState(),cl=cLang();
   const msg={hi:t('hi'),happy:t('happy'),sleepy:t('sleepy')}[st];
-  let h=`<div class="mascot">${owl(st)}<div class="bubble">${esc(msg)}</div></div>`;
+  let h=`<div class="mascot"><button class="avbtn" data-act="ov" data-v="avatar" aria-label="${esc(t('s_buddy'))}: ${esc(avName(S.avatar||'unicorn'))}">${owl(st)}</button><div class="bubble">${esc(msg)}</div></div>`;
   if(cl!==S.lang) h+=`<p class="note">${esc(t('fallback'))}</p>`;
   if(!S.today.ids.length) return h+`<div class="empty">${esc(t('allDone'))}</div>`;
   S.today.ids.forEach(id=>{h+=card(id);});
@@ -421,6 +452,7 @@ function renderOverlay(){
   if(o.type==='menu') return shell(t('menu'),`<ul class="menu">
     ${[['news','✨'],['about','💜'],['family','🏡'],['share','🔗'],['terms','📄'],['coffee','☕']].map(([k,i])=>`<li><button data-act="ov" data-v="${k}"><span>${i}</span>${esc(t(k==='news'?'whatsNew':k))}</button></li>`).join('')}</ul>`);
   if(o.type==='news')return shell(t('whatsNew'),newsBody());
+  if(o.type==='avatar')return shell(t('s_buddy'),`<p class="muted">${esc(t('buddyHint'))}</p>`+avatarPicker());
   if(o.type==='about') return shell(t('about'),T().aboutText.map(p=>`<p>${esc(p)}</p>`).join(''));
   if(o.type==='terms') return shell(t('terms'),T().termsText.map(p=>`<p>${esc(p)}</p>`).join(''));
   if(o.type==='coffee') return shell(t('coffee'),`<p>${esc(t('coffeeText'))}</p><a class="btn" href="${COFFEE}" target="_blank" rel="noopener">☕ ${esc(t('coffee'))}</a>`);
@@ -465,6 +497,7 @@ function settingsBody(){
   const L=window.PW_LANGNAMES,cl=Object.keys(CATS()).filter(c=>pack(cLang()).some(e=>e.cat===c));
   const seg=(key,opts)=>`<div class="seg">${opts.map(([v,l])=>`<button class="${S[key]===v?'on':''}" data-act="set" data-k="${key}" data-v="${v}">${esc(l)}</button>`).join('')}</div>`;
   return `
+  <div class="fld"><span>${esc(t('s_buddy'))}</span>${avatarPicker()}<small>${esc(t('buddyHint'))}</small></div>
   <label class="fld"><span>${esc(t('s_language'))}</span><select data-in="lang">${LANGS.map(l=>`<option value="${l}" ${S.lang===l?'selected':''}>${L[l]}</option>`).join('')}</select></label>
   <label class="fld"><span>${esc(t('s_learn'))}</span><select data-in="learn"><option value="off">${esc(t('off'))}</option>${LANGS.filter(l=>l!==S.lang).map(l=>`<option value="${l}" ${S.learn===l?'selected':''}>${L[l]}${window.PW_CONTENT[l]?'':' ('+esc(t('soon'))+')'}</option>`).join('')}</select></label>
   <div class="fld"><span>${esc(t('s_mode'))}</span>${['cat','random','mixed'].map(m=>`<label class="radio"><input type="radio" name="mode" value="${m}" ${S.mode===m?'checked':''} data-in="mode"> ${esc(t({cat:'modeCat',random:'modeRandom',mixed:'modeMixed'}[m]))}</label>`).join('')}</div>
@@ -560,6 +593,7 @@ document.addEventListener('click',ev=>{
     if(id===rv.id){v.s=Math.min(INT.length,v.s+1);burst('glyph',['✨','⭐'],12);}else{v.s=Math.max(0,v.s-1);}
     v.d=todayStr();save();render();}
   else if(a==='rnext'){rv=null;render();}
+  else if(a==='avatar'){S.avatar=el.dataset.v;save();if(overlay&&overlay.type==='avatar')overlay=null;render();burst('glyph',['✨','⭐'],10);}
   else if(a==='set'){S[el.dataset.k]=el.dataset.v;save();render();}
   else if(a==='reset'){if(!resetArm){resetArm=true;render();return;}
     const keep={lang:S.lang,theme:S.theme,accent:S.accent,anim:S.anim,junior:S.junior};S=Object.assign(DEF(),keep);save();resetArm=false;overlay=null;view='today';render();}

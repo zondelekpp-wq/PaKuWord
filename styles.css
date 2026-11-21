@@ -319,3 +319,16 @@ input[type=color]{width:40px;height:40px;border:0;background:none;padding:0}
 .owl-sleepy .uni-horn{transform:rotate(-10deg)}
 @keyframes twinkle{0%,100%{opacity:0;transform:scale(.6)}50%{opacity:1;transform:scale(1)}}
 @keyframes hornGlow{50%{filter:drop-shadow(0 0 5px #FFD86B)}}
+
+/* companions */
+.avbtn{border:0;background:none;padding:0;flex:none;border-radius:16px}
+.mascot .avbtn .owl{width:78px;display:block}
+.avgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:6px 0}
+.avopt{border:2px solid var(--line);background:var(--card);border-radius:16px;padding:8px 4px 6px;display:flex;flex-direction:column;align-items:center;gap:2px;font-size:.78rem;font-weight:600;color:var(--fg)}
+.avopt .owl{width:64px}
+.avopt.on{border-color:var(--acc);box-shadow:0 0 0 3px color-mix(in srgb,var(--acc) 25%,transparent)}
+.av .owl-wr{transform-box:fill-box;transform-origin:25% 95%}
+.av .av-spark{opacity:0}
+.anim-full .owl-happy .av-spark,.anim-calm .owl-happy .av-spark{animation:twinkle 1.6s ease-in-out 3}
+.anim-off .av-spark,.owl-happy .av-spark{opacity:1}
+.anim-full .owl-happy .av-spark{opacity:0}

@@ -1,6 +1,7 @@
 /* PaKuWord – interface texts (8 languages). English is the default. */
 window.PW_I18N = {
 en: {
+  s_buddy:"Your companion", buddyHint:"Tap a companion to choose it. You can change it any time – also by tapping it on the Today screen.",
   sayWord:"Pronounce", sayAll:"Listen to the explanation", stopSpeak:"Stop reading", s_voice:"Reading aloud", s_autoread:"Read cards aloud automatically", autoreadHint:"Helpful for blind and low-vision users: each new word, its explanation and every celebration are read aloud.", s_rate:"Reading speed", slow:"Slow", normal:"Normal", revealBtn:"Reveal the word", whatsNew:"What’s new", newsTitle:"PaKuWord has been updated!", newsVer:"Version {v}", noVoice:"No voice for this language is installed on your phone. You can add one in system settings → Text-to-speech.", listenBio:"Listen to the biography",
   tagline:"One word a day. Explained properly.",
   install:"Install", installIos:"To install: tap Share, then “Add to Home Screen”.",
@@ -53,6 +54,7 @@ en: {
     "© 2026 Piotr Żondełek. All rights reserved. Copying, modifying or redistributing the app or its content without written permission is not allowed. Sharing a link to the app is very welcome."]
 },
 pl: {
+  s_buddy:"Twój towarzysz", buddyHint:"Stuknij postać, żeby ją wybrać. Możesz ją zmienić w każdej chwili – także stukając w nią na ekranie „Dziś”.",
   sayWord:"Wymów", sayAll:"Odsłuchaj wyjaśnienie", stopSpeak:"Zatrzymaj czytanie", s_voice:"Czytanie na głos", s_autoread:"Czytaj karty automatycznie", autoreadHint:"Pomocne dla osób niewidomych i słabowidzących: każde nowe słowo, jego wyjaśnienie i każda gratulacja są czytane na głos.", s_rate:"Tempo czytania", slow:"Wolno", normal:"Normalnie", revealBtn:"Odkryj słowo", whatsNew:"Co nowego", newsTitle:"PaKuWord ma aktualizację!", newsVer:"Wersja {v}", noVoice:"Na Twoim telefonie nie ma głosu dla tego języka. Możesz go dodać w ustawieniach systemu → Zamiana tekstu na mowę.", listenBio:"Odsłuchaj biogram",
   tagline:"Jedno słowo dziennie. Porządnie wytłumaczone.",
   install:"Zainstaluj", installIos:"Aby zainstalować: stuknij Udostępnij, potem „Do ekranu początkowego”.",
@@ -105,6 +107,7 @@ pl: {
     "© 2026 Piotr Żondełek. Wszelkie prawa zastrzeżone. Kopiowanie, modyfikowanie i rozpowszechnianie aplikacji lub jej treści bez pisemnej zgody jest zabronione. Udostępnianie linku do aplikacji – mile widziane."]
 },
 de: {
+  s_buddy:"Dein Begleiter", buddyHint:"Tippe auf eine Figur, um sie zu wählen. Du kannst sie jederzeit ändern – auch durch Tippen auf dem Heute-Bildschirm.",
   sayWord:"Aussprechen", sayAll:"Erklärung anhören", stopSpeak:"Vorlesen stoppen", s_voice:"Vorlesen", s_autoread:"Karten automatisch vorlesen", autoreadHint:"Hilfreich für blinde und sehbehinderte Menschen: Jedes neue Wort, seine Erklärung und jede Gratulation werden vorgelesen.", s_rate:"Lesetempo", slow:"Langsam", normal:"Normal", revealBtn:"Wort aufdecken", whatsNew:"Was ist neu", newsTitle:"PaKuWord wurde aktualisiert!", newsVer:"Version {v}", noVoice:"Auf deinem Handy ist keine Stimme für diese Sprache installiert. Du kannst eine in den Systemeinstellungen → Text-in-Sprache hinzufügen.", listenBio:"Biografie anhören",
   tagline:"Ein Wort am Tag. Richtig erklärt.",
   install:"Installieren", installIos:"Zum Installieren: Teilen tippen, dann „Zum Home-Bildschirm“.",
@@ -157,6 +160,7 @@ de: {
     "© 2026 Piotr Żondełek. Alle Rechte vorbehalten. Kopieren, Verändern oder Weiterverbreiten der App oder ihrer Inhalte ohne schriftliche Erlaubnis ist nicht gestattet. Einen Link zur App zu teilen ist sehr willkommen."]
 },
 es: {
+  s_buddy:"Tu compañero", buddyHint:"Toca un personaje para elegirlo. Puedes cambiarlo cuando quieras, también tocándolo en la pantalla Hoy.",
   sayWord:"Pronunciar", sayAll:"Escuchar la explicación", stopSpeak:"Detener la lectura", s_voice:"Lectura en voz alta", s_autoread:"Leer las tarjetas automáticamente", autoreadHint:"Útil para personas ciegas o con baja visión: cada palabra nueva, su explicación y cada felicitación se leen en voz alta.", s_rate:"Velocidad de lectura", slow:"Lenta", normal:"Normal", revealBtn:"Descubrir la palabra", whatsNew:"Novedades", newsTitle:"¡PaKuWord se ha actualizado!", newsVer:"Versión {v}", noVoice:"Tu teléfono no tiene una voz para este idioma. Puedes añadirla en Ajustes del sistema → Texto a voz.", listenBio:"Escuchar la biografía",
   tagline:"Una palabra al día. Bien explicada.",
   install:"Instalar", installIos:"Para instalar: toca Compartir y luego «Añadir a pantalla de inicio».",
@@ -209,6 +213,7 @@ es: {
     "© 2026 Piotr Żondełek. Todos los derechos reservados. No se permite copiar, modificar ni redistribuir la app o su contenido sin permiso por escrito. Compartir el enlace a la app es muy bienvenido."]
 },
 fr: {
+  s_buddy:"Ton compagnon", buddyHint:"Touche un personnage pour le choisir. Tu peux le changer quand tu veux – aussi en le touchant sur l’écran Aujourd’hui.",
   sayWord:"Prononcer", sayAll:"Écouter l’explication", stopSpeak:"Arrêter la lecture", s_voice:"Lecture à voix haute", s_autoread:"Lire les cartes automatiquement", autoreadHint:"Utile pour les personnes aveugles ou malvoyantes : chaque nouveau mot, son explication et chaque félicitation sont lus à voix haute.", s_rate:"Vitesse de lecture", slow:"Lente", normal:"Normale", revealBtn:"Découvrir le mot", whatsNew:"Nouveautés", newsTitle:"PaKuWord a été mis à jour !", newsVer:"Version {v}", noVoice:"Aucune voix pour cette langue n’est installée sur votre téléphone. Vous pouvez en ajouter une dans Réglages → Synthèse vocale.", listenBio:"Écouter la biographie",
   tagline:"Un mot par jour. Bien expliqué.",
   install:"Installer", installIos:"Pour installer : touchez Partager, puis « Sur l’écran d’accueil ».",
@@ -261,6 +266,7 @@ fr: {
     "© 2026 Piotr Żondełek. Tous droits réservés. Il est interdit de copier, modifier ou redistribuer l’app ou son contenu sans autorisation écrite. Partager le lien de l’app est le bienvenu."]
 },
 zh: {
+  s_buddy:"你的伙伴", buddyHint:"点一下角色就能选择它。随时都可以更换——也可以在“今天”页面点它来换。",
   sayWord:"发音", sayAll:"收听解释", stopSpeak:"停止朗读", s_voice:"朗读", s_autoread:"自动朗读卡片", autoreadHint:"方便盲人和视力低下的用户：每个新词、它的解释和每次祝贺都会被朗读出来。", s_rate:"朗读速度", slow:"慢", normal:"正常", revealBtn:"揭开这个词", whatsNew:"新功能", newsTitle:"PaKuWord 已更新！", newsVer:"版本 {v}", noVoice:"你的手机没有安装这种语言的语音。可以在系统设置 → 文字转语音中添加。", listenBio:"收听传记",
   tagline:"每天一个词，讲得明明白白。",
   install:"安装", installIos:"安装方法：点按“分享”，然后选“添加到主屏幕”。",
@@ -313,6 +319,7 @@ zh: {
     "© 2026 Piotr Żondełek。保留所有权利。未经书面许可，禁止复制、修改或传播本应用及其内容。欢迎分享应用链接。"]
 },
 uk: {
+  s_buddy:"Твій компаньйон", buddyHint:"Торкнися персонажа, щоб вибрати його. Його можна змінити будь-коли – також торкнувшись його на екрані «Сьогодні».",
   sayWord:"Вимовити", sayAll:"Прослухати пояснення", stopSpeak:"Зупинити читання", s_voice:"Читання вголос", s_autoread:"Автоматично читати картки", autoreadHint:"Корисно для незрячих і слабозорих людей: кожне нове слово, його пояснення та кожне привітання читаються вголос.", s_rate:"Темп читання", slow:"Повільно", normal:"Звичайно", revealBtn:"Відкрити слово", whatsNew:"Що нового", newsTitle:"PaKuWord оновлено!", newsVer:"Версія {v}", noVoice:"На вашому телефоні немає голосу для цієї мови. Його можна додати в налаштуваннях системи → Синтез мовлення.", listenBio:"Прослухати біографію",
   tagline:"Одне слово на день. Пояснене як слід.",
   install:"Встановити", installIos:"Щоб встановити: торкніться «Поділитися», потім «На початковий екран».",
@@ -365,6 +372,7 @@ uk: {
     "© 2026 Piotr Żondełek. Усі права захищено. Копіювати, змінювати чи поширювати застосунок або його вміст без письмового дозволу заборонено. Ділитися посиланням на застосунок – дуже вітається."]
 },
 lv: {
+  s_buddy:"Tavs pavadonis", buddyHint:"Pieskaries tēlam, lai to izvēlētos. To var mainīt jebkurā laikā – arī pieskaroties tam ekrānā “Šodien”.",
   sayWord:"Izrunāt", sayAll:"Klausīties skaidrojumu", stopSpeak:"Apturēt lasīšanu", s_voice:"Lasīšana balsī", s_autoread:"Automātiski lasīt kartītes", autoreadHint:"Noderīgi neredzīgiem un vājredzīgiem cilvēkiem: katrs jauns vārds, tā skaidrojums un katrs apsveikums tiek nolasīts balsī.", s_rate:"Lasīšanas ātrums", slow:"Lēni", normal:"Parasti", revealBtn:"Atklāt vārdu", whatsNew:"Jaunumi", newsTitle:"PaKuWord ir atjaunināts!", newsVer:"Versija {v}", noVoice:"Jūsu tālrunī nav instalēta balss šai valodai. To var pievienot sistēmas iestatījumos → Teksta pārvēršana runā.", listenBio:"Klausīties biogrāfiju",
   tagline:"Viens vārds dienā. Kārtīgi izskaidrots.",
   install:"Instalēt", installIos:"Lai instalētu: pieskarieties “Kopīgot”, tad “Pievienot sākuma ekrānam”.",

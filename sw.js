@@ -1,7 +1,8 @@
 /* PaKuWord service worker – offline, monthly updates, optional daily reminder */
 importScripts('version.js','catalog.js');
-const CACHE='pakuword-'+self.PW_VERSION;
-const CORE=['./','index.html','styles.css','app.js','i18n.js','categories.js','figures.js','version.js','catalog.js','manifest.webmanifest','icon-192.png','icon-512.png','icon-maskable.png','qr.png'];
+const BUILD=2; // raise for fixes between monthly releases
+const CACHE='pakuword-'+self.PW_VERSION+'-'+BUILD;
+const CORE=['./','index.html','styles.css','app.js','i18n.js','categories.js','figures.js','family.js','version.js','catalog.js','manifest.webmanifest','icon-192.png','icon-512.png','icon-maskable.png','qr.png','qr.svg'];
 const FILES=CORE.concat(self.PW_FILES||[]);
 self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(FILES.map(f=>new Request(f,{cache:'reload'})))).then(()=>self.skipWaiting()));});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(k=>Promise.all(k.filter(n=>n!==CACHE&&n!=='pakuword-state').map(n=>caches.delete(n)))).then(()=>self.clients.claim()));});

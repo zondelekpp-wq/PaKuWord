@@ -8,8 +8,8 @@ const BADGES=[10,50,100,250,500,1000];
 const KEY='pakuword.state.v1';
 const APP_URL='https://zondelekpp-wq.github.io/PaKuWord/';
 const COFFEE='https://buymeacoffee.com/Hieronim';
-const GH='https://zondelekpp-wq.github.io/';
-const FAMILY=[{n:'PaKuReading',u:GH+'PaKu/',i:'📖'},{n:'PaKuGrounding',u:GH+'PaKuGrounding/',i:'⚓'},{n:'PaKuSteps',u:GH+'PaKuSteps/',i:'👣'},{n:'PaKuFamily',u:GH+'PaKuFamily/',i:'🏡'}];
+const FAM=window.PaKuFamily||null;           // shared PaKu family file; PaKuWord works fully without it
+const SELF='word';
 const ACCENTS=['#5B4BC4','#138A8A','#D9534F','#C98A12','#3C8D40','#2F6FD6'];
 const CATS=()=>window.PW_CATS||{};
 const catIc=c=>{const k=CATS()[c];if(k&&k.svg)return `<svg class="ic" viewBox="0 0 24 24" aria-hidden="true">${k.svg}</svg>`;return svg((k&&k.icon)||'card');};
@@ -17,7 +17,7 @@ const FIGS=window.PW_FIG, TOTAL=FIGS.length; // 50 figures + "You" = 51 stages
 
 const DEF=()=>({lang:'en',learn:'off',mode:'random',cats:['med','law','gen','psy','biz'],stageLen:20,notify:'',
   anim:(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)?'calm':'full',junior:false,theme:'light',accent:'#5B4BC4',learned:{},days:[],steps:0,earned:0,lastStepDay:'',
-  today:{date:'',ids:[],rev:[]},cycle:[],lastCat:'',badges:[],autoread:false,rate:'normal',seenVer:''});
+  today:{date:'',ids:[],rev:[]},cycle:[],lastCat:'',badges:[],fam:{},autoread:false,rate:'normal',seenVer:''});
 let S=load();
 let view='today', overlay=null, deferredPrompt=null, resetArm=false, rv=null, libQ='';
 const queue=[], openMore=new Set(), freshReveal=new Set();
@@ -117,6 +117,23 @@ function owlState(){
   return 'hi';
 }
 
+/* ---------- PaKu family: other apps are optional, shortcuts only for apps used on this device ---------- */
+const famApps=()=>FAM?FAM.all().filter(a=>a.id!==SELF):[];
+const famOn=a=>(S.fam&&a.id in S.fam)?!!S.fam[a.id]:FAM.used(a.id);
+function famShortcuts(){
+  if(!FAM)return '';
+  const on=famApps().filter(famOn);if(!on.length)return '';
+  return `<div class="famrow">${on.map(a=>`<a class="famchip" href="${esc(FAM.url(a))}"><img src="${esc(FAM.icon(a))}" alt="" width="22" height="22" onerror="this.remove()">${esc(a.name)}</a>`).join('')}</div>`;
+}
+function famBody(){
+  if(!FAM)return `<p class="muted">–</p>`;
+  return `<p class="muted">${esc(FAM.t('fam_d',S.lang))}</p>`+famApps().map(a=>`<div class="famapp">
+    <img src="${esc(FAM.icon(a))}" alt="" width="44" height="44" onerror="this.style.visibility='hidden'">
+    <div class="fa-t"><b>${esc(a.name)}</b><small>${esc(FAM.desc(a,S.lang))}</small>${FAM.used(a.id)?`<span class="chip">✓ ${esc(FAM.t('fam_used',S.lang))}</span>`:''}
+      <label class="row fa-sw"><span>${esc(FAM.t('fam_link',S.lang))}</span><span class="switch"><input type="checkbox" ${famOn(a)?'checked':''} data-in="fam" data-id="${esc(a.id)}"><i></i></span></label></div>
+    <a class="btn small" href="${esc(FAM.url(a))}">${esc(FAM.t(FAM.used(a.id)?'fam_open':'fam_get',S.lang))}</a></div>`).join('')+
+   `<small class="muted">${esc(FAM.t('fam_link_d',S.lang))}</small><p><a class="btn" href="${esc(FAM.hub)}">🏡 ${esc(FAM.t('fam_hub',S.lang))}</a></p>`;
+}
 /* ---------- word picking ---------- */
 const allCats=l=>[...new Set(pack(l).map(e=>e.cat))];
 function okE(e){
@@ -272,7 +289,7 @@ function vToday(){
     h+=can?`<button class="btn more-btn" data-act="more">＋ ${esc(t('oneMore'))}</button>`:`<div class="empty">${esc(t('allDone'))}</div>`;
   }
   h+=`<p class="count">${esc(t('todayCount',{n:S.today.rev.length}))} · ${esc(t('learnedN',{n:wordsN()}))}</p>`;
-  return h;
+  return h+famShortcuts();
 }
 function txt(e){return S.junior&&e.jl?{s:e.js,l:e.jl,x:e.jx}:{s:e.s,l:e.l,x:e.x};}
 function cardBody(e,fresh){
@@ -403,7 +420,7 @@ function renderOverlay(){
   if(o.type==='about') return shell(t('about'),T().aboutText.map(p=>`<p>${esc(p)}</p>`).join(''));
   if(o.type==='terms') return shell(t('terms'),T().termsText.map(p=>`<p>${esc(p)}</p>`).join(''));
   if(o.type==='coffee') return shell(t('coffee'),`<p>${esc(t('coffeeText'))}</p><a class="btn" href="${COFFEE}" target="_blank" rel="noopener">☕ ${esc(t('coffee'))}</a>`);
-  if(o.type==='family') return shell(t('family'),`<ul class="menu">${FAMILY.map(f=>`<li><a href="${f.u}" target="_blank" rel="noopener"><span>${f.i}</span>${esc(f.n)}</a></li>`).join('')}</ul>`);
+  if(o.type==='family') return shell(FAM?FAM.t('fam_title',S.lang):t('family'),famBody());
   if(o.type==='share') return shell(t('share'),`<div class="qr"><img src="qr.png" alt="QR" width="220" height="220"><p>${esc(t('shareHint'))}</p><code>${APP_URL}</code>
      <button class="btn" data-act="copy">${esc(o.copied?t('copied'):t('copyLink'))}</button></div>`);
   if(o.type==='word'){const e=getE(o.id);return shell(catName(e.cat),`<article class="wcard flat">${cardBody(e,false)}</article>`);}
@@ -563,6 +580,7 @@ document.addEventListener('change',ev=>{
   else if(k==='cat'){const c=el.value;S.cats=el.checked?[...new Set([...S.cats,c])]:S.cats.filter(x=>x!==c);S.cycle=[];}
   else if(k==='junior'){S.junior=el.checked;rv=null;}
   else if(k==='autoread'){S.autoread=el.checked;}
+  else if(k==='fam'){S.fam=Object.assign({},S.fam,{[el.dataset.id]:el.checked});}
   else if(k==='notify'){S.notify=el.checked?(document.querySelector('[data-in=ntime]').value||'09:00'):'';if(S.notify)setupNotify();}
   else if(k==='ntime'){if(S.notify){S.notify=el.value;setupNotify();}}
   else if(k==='stage'||k==='accent'){render();return;}
@@ -610,6 +628,7 @@ loadPacks(window.PW_FILES||[]).then(()=>{
   render();
   if(overlay&&overlay.type==='news'&&S.autoread){const c=(window.PW_CHANGES||[])[0];if(c)setTimeout(()=>speak([t('newsTitle'),...(c.notes[S.lang]||c.notes.en)],S.lang),600);}
   if(S.notify)setupNotify();
+  if(FAM){FAM.detect().then(render).catch(()=>{});FAM.refresh().then(()=>FAM.detect()).then(render).catch(()=>{});}
 });
 window.__pw={get S(){return S;},markLearned,render,todayStr};
 })();

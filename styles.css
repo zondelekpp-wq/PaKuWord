@@ -394,3 +394,14 @@ input[type=color]{width:40px;height:40px;border:0;background:none;padding:0}
 .pl-b .ic{width:22px;height:22px;stroke:currentColor}
 .listen.tpaused{background:color-mix(in srgb,var(--gold) 35%,transparent);color:var(--fg)}
 @media (min-width:1000px){#player{bottom:24px;left:132px}}
+/* Junior: big, easy-to-hit listening buttons */
+.junior .say-row{gap:12px;margin:10px 0 4px}
+.junior .listen{font-size:1.05rem;padding:14px 22px 14px 18px;border-radius:26px;min-height:58px;gap:10px;box-shadow:0 3px 0 color-mix(in srgb,var(--acc) 30%,transparent)}
+.junior .listen .ic{width:28px;height:28px;stroke-width:2.1}
+.junior .say-row .listen{flex:1 1 220px;justify-content:center}
+.junior .learn .ibtn.sm{width:54px;height:54px}
+.junior .learn .ibtn.sm .ic{width:28px;height:28px}
+.junior #player{padding:12px 12px 12px 18px}
+.junior .pl-b{height:60px;min-width:60px;font-size:1.05rem;border-radius:18px}
+.junior .pl-b .ic{width:28px;height:28px}
+.term .tw{display:inline-block;white-space:nowrap}

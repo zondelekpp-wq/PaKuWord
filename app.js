@@ -364,7 +364,7 @@ function vToday(){
 function txt(e){return S.junior&&e.jl?{s:e.js,l:e.jl,x:e.jx}:{s:e.s,l:e.l,x:e.x};}
 function cardBody(e,fresh){
   const x=txt(e),cl=cLang(),open=openMore.has(e.id);
-  const term=fresh?[...e.t].map((c,i)=>`<span style="animation-delay:${i*35}ms">${c===' '?'&nbsp;':esc(c)}</span>`).join(''):esc(e.t);
+  let li=0;const term=fresh?e.t.split(' ').map(w=>`<span class="tw">${[...w].map(c=>`<span style="animation-delay:${(li++)*35}ms">${esc(c)}</span>`).join('')}</span>`).join(' '):esc(e.t);
   let tags=`<span class="chip">${catIc(e.cat)}${esc(catName(e.cat))}</span>`;
   if(e.only) tags+=`<span class="chip gold">★ ${esc(t('onlyIn'))}</span>`;
   if(e.c) tags+=`<span class="chip">${esc(t('lawOf',{c:e.c}))}</span>`;

@@ -1,4 +1,4 @@
-/* PaKuWord – figure cards (English), batch 1: figures 1–10 */
+/* PaKuWord – figure cards (English), batch 1: figures 1–12 */
 window.PW_FIG_TEXT = window.PW_FIG_TEXT || {};
 window.PW_FIG_TEXT.en = {
  confucius:{f:"Philosophy · China",
@@ -40,5 +40,13 @@ window.PW_FIG_TEXT.en = {
  ibnbattuta:{f:"Travel & geography · Morocco",
   bio:"Ibn Battuta was born in Tangier, Morocco. At 21 he set out on a pilgrimage to Mecca – and kept travelling for almost thirty years. He crossed North Africa, the Middle East, East Africa, Central Asia, India, the Maldives and reached China, covering around 120,000 kilometres, more than any other known traveller before the age of steam. He worked as a judge in Delhi and in the Maldives, survived shipwrecks and bandits, and met sultans and scholars. Back home, he dictated his memories to the writer Ibn Juzayy, and the resulting book, the Rihla, is a priceless picture of the 14th-century world.",
   facts:["He travelled about three times farther than Marco Polo.","His book's full title translates as “A Gift to Those Who Contemplate the Wonders of Cities and the Marvels of Travelling”.","A huge shopping centre in Dubai is named after him, decorated in the styles of the places he visited."],
-  term:"Travelogue – a book or film describing someone's travels."}
+  term:"Travelogue – a book or film describing someone's travels."},
+ gutenberg:{f:"Printing · Germany",
+  bio:"Johannes Gutenberg was born around 1400 in Mainz, a city on the Rhine, and trained as a metalworker. Around the middle of the 15th century he developed a complete system for printing with movable metal type: a hand mould for casting identical letters quickly, a metal alloy that melted easily and hardened fast, an oil-based ink that stuck to metal, and a press adapted from those used for wine and paper. Around 1455 his workshop completed the famous Gutenberg Bible. He lost his workshop to his business partner Johann Fust after a lawsuit, but his method spread across Europe within decades and made books far cheaper, helping knowledge, the Reformation and science to spread.",
+  facts:["The Gutenberg Bible has 42 lines on most pages, so it is also called the 42-line Bible.","Fewer than fifty copies of the Gutenberg Bible survive, some of them incomplete.","No portrait of Gutenberg made during his lifetime exists – every picture of him was imagined later."],
+  term:"Movable type – single letters that can be arranged, printed and reused for new pages."},
+ leonardo:{f:"Art & invention · Italy",
+  bio:"Leonardo da Vinci was born in 1452 near the small town of Vinci in Tuscany. As a teenager he became an apprentice in the Florence workshop of the artist Andrea del Verrocchio. He later worked for the Duke of Milan, where he painted The Last Supper, and spent his final years in France at the invitation of King Francis I, dying near Amboise in 1519. Leonardo painted the Mona Lisa, but he was also endlessly curious about everything: he studied anatomy, water, birds, plants and machines, and filled thousands of notebook pages with drawings and ideas for flying machines, bridges and much more. Only a small number of paintings by him survive, many left unfinished.",
+  facts:["He often wrote in mirror writing, from right to left.","One of his few surviving portraits, Lady with an Ermine, hangs in the Czartoryski Museum in Kraków.","His famous drawing Vitruvian Man shows the ideal proportions of the human body described by the Roman architect Vitruvius."],
+  term:"Sfumato – a way of painting with soft, smoky transitions between colours, without sharp outlines."}
 };

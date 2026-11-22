@@ -16,7 +16,7 @@
 Merge `dev` into `main`, set `PW_VERSION` to the release date, write the newest `PW_CHANGES` entry in all 8 languages (new domains by name, number of new words, new biographies, fixes), validate, rebuild the download package with `python3 _build_zip.py`, push `main`, merge `main` back into `dev`. Users see a “What’s new” screen once on their next visit (it can be read aloud).
 
 ## Domain queue
-- [ ] his – History
+- [x] his – History
 - [ ] mat – Mathematics
 - [ ] arc – Archaeology
 - [ ] cook – Cooking
@@ -58,9 +58,10 @@ Merge `dev` into `main`, set `PW_VERSION` to the release date, write the newest 
 - [ ] logic – Logic & critical thinking
 
 ## Status
-- Words: en 30, pl 30 (med 6, law 6, gen 6, psy 6, biz 6)
-- Figure biographies: 10 / 50 (en, pl)
+- Words: en 90, pl 90 (med 12, law 12, gen 12, psy 12, biz 12, his 30)
+- Figure biographies: 12 / 50 (en, pl)
 - Other languages (de, es, fr, zh, uk, lv): interface ready, words fall back to English – planned later.
 
 ## Log
 - 2026-11-21 – v1: 5 domains, 30 words en + 30 pl, biographies 1–10, reading aloud, monthly updates. Released as 2026.11.21.
+- 2026-11-22 – new domain History (his, 30 words); +6 each to med, law, gen, psy, biz; 60 words en + 60 pl; biographies 11–12 (Gutenberg, Leonardo da Vinci).

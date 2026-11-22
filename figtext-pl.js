@@ -1,4 +1,4 @@
-/* PaKuWord – karty postaci (polski), partia 1: postacie 1–10 */
+/* PaKuWord – karty postaci (polski), partia 1: postacie 1–12 */
 window.PW_FIG_TEXT = window.PW_FIG_TEXT || {};
 window.PW_FIG_TEXT.pl = {
  confucius:{n:"Konfucjusz",f:"Filozofia · Chiny",
@@ -40,5 +40,13 @@ window.PW_FIG_TEXT.pl = {
  ibnbattuta:{n:"Ibn Battuta",f:"Podróże i geografia · Maroko",
   bio:"Ibn Battuta urodził się w Tangerze w Maroku. W wieku 21 lat wyruszył na pielgrzymkę do Mekki – i podróżował przez prawie trzydzieści lat. Przemierzył Afrykę Północną, Bliski Wschód, Afrykę Wschodnią, Azję Środkową, Indie i Malediwy, docierając aż do Chin – łącznie około 120 000 kilometrów, więcej niż jakikolwiek znany podróżnik przed epoką pary. Pracował jako sędzia w Delhi i na Malediwach, przeżył katastrofy statków i napady rozbójników, spotykał sułtanów i uczonych. Po powrocie podyktował wspomnienia pisarzowi Ibn Dżuzajjowi, a powstała księga, „Rihla”, jest bezcennym obrazem świata XIV wieku.",
   facts:["Przebył około trzy razy dłuższą drogę niż Marco Polo.","Pełny tytuł jego księgi brzmi w przekładzie: „Dar dla tych, którzy podziwiają cuda miast i dziwy podróży”.","Jego imię nosi ogromne centrum handlowe w Dubaju, urządzone w stylach odwiedzonych przez niego krain."],
-  term:"Relacja z podróży – książka lub film opisujące czyjąś wędrówkę."}
+  term:"Relacja z podróży – książka lub film opisujące czyjąś wędrówkę."},
+ gutenberg:{n:"Jan Gutenberg",f:"Druk · Niemcy",
+  bio:"Johannes Gutenberg, po polsku często nazywany Janem Gutenbergiem, urodził się około 1400 roku w Moguncji nad Renem i wyuczył się obróbki metali. W połowie XV wieku opracował kompletny system druku ruchomymi metalowymi czcionkami: ręczną formę do szybkiego odlewania jednakowych liter, stop metalu, który łatwo się topił i szybko twardniał, farbę na bazie oleju, przylegającą do metalu, oraz prasę przerobioną z tych, których używano do wyciskania winogron i papieru. Około 1455 roku jego warsztat ukończył słynną Biblię Gutenberga. Po procesie ze wspólnikiem Johannem Fustem stracił warsztat, ale jego metoda w ciągu kilkudziesięciu lat objęła całą Europę, sprawiła, że książki stały się dużo tańsze, i przyczyniła się do rozwoju wiedzy, reformacji i nauki.",
+  facts:["Biblia Gutenberga ma na większości stron po 42 wiersze, dlatego nazywa się ją też Biblią 42-wierszową.","Do dziś zachowało się mniej niż pięćdziesiąt egzemplarzy Biblii Gutenberga, niektóre niekompletne; jeden z nich jest w Pelplinie.","Nie istnieje żaden portret Gutenberga wykonany za jego życia – wszystkie jego wizerunki są wyobrażeniami późniejszych artystów."],
+  term:"Czcionka ruchoma – pojedyncza litera, którą można ustawiać, drukować i używać ponownie do kolejnych stron."},
+ leonardo:{n:"Leonardo da Vinci",f:"Sztuka i wynalazki · Włochy",
+  bio:"Leonardo da Vinci urodził się w 1452 roku w pobliżu miasteczka Vinci w Toskanii. Jako nastolatek trafił na naukę do florenckiej pracowni artysty Andrei del Verrocchia. Później pracował dla księcia Mediolanu, gdzie namalował „Ostatnią Wieczerzę”, a ostatnie lata spędził we Francji na zaproszenie króla Franciszka I i zmarł w pobliżu Amboise w 1519 roku. Namalował „Mona Lisę”, ale interesował się dosłownie wszystkim: badał anatomię, wodę, ptaki, rośliny i maszyny, a tysiące stron notatników zapełnił rysunkami i pomysłami na maszyny latające, mosty i wiele innych. Zachowało się niewiele jego obrazów, a część z nich pozostała niedokończona.",
+  facts:["Często pisał pismem lustrzanym, od prawej do lewej.","Jeden z niewielu zachowanych portretów jego pędzla, „Dama z gronostajem”, znajduje się w Muzeum Książąt Czartoryskich w Krakowie.","Jego słynny rysunek „Człowiek witruwiański” przedstawia idealne proporcje ludzkiego ciała opisane przez rzymskiego architekta Witruwiusza."],
+  term:"Sfumato – sposób malowania z miękkimi, jakby zadymionymi przejściami między barwami, bez ostrych konturów."}
 };

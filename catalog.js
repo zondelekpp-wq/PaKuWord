@@ -2,5 +2,6 @@
 (typeof window!=='undefined'?window:self).PW_FILES = [
  "figtext-en.js","figtext-pl.js",
  "content-en.js","content-pl.js",
- "pack-2026-11-22-en.js","pack-2026-11-22-pl.js"
+ "pack-2026-11-22-en.js","pack-2026-11-22-pl.js",
+ "pack-2026-11-23-en.js","pack-2026-11-23-pl.js"
 ];

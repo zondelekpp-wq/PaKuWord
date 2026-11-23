@@ -1,4 +1,4 @@
-/* PaKuWord – figure cards (English), batch 1: figures 1–12 */
+/* PaKuWord – figure cards (English), batch 1: figures 1–14 */
 window.PW_FIG_TEXT = window.PW_FIG_TEXT || {};
 window.PW_FIG_TEXT.en = {
  confucius:{f:"Philosophy · China",
@@ -48,5 +48,13 @@ window.PW_FIG_TEXT.en = {
  leonardo:{f:"Art & invention · Italy",
   bio:"Leonardo da Vinci was born in 1452 near the small town of Vinci in Tuscany. As a teenager he became an apprentice in the Florence workshop of the artist Andrea del Verrocchio. He later worked for the Duke of Milan, where he painted The Last Supper, and spent his final years in France at the invitation of King Francis I, dying near Amboise in 1519. Leonardo painted the Mona Lisa, but he was also endlessly curious about everything: he studied anatomy, water, birds, plants and machines, and filled thousands of notebook pages with drawings and ideas for flying machines, bridges and much more. Only a small number of paintings by him survive, many left unfinished.",
   facts:["He often wrote in mirror writing, from right to left.","One of his few surviving portraits, Lady with an Ermine, hangs in the Czartoryski Museum in Kraków.","His famous drawing Vitruvian Man shows the ideal proportions of the human body described by the Roman architect Vitruvius."],
-  term:"Sfumato – a way of painting with soft, smoky transitions between colours, without sharp outlines."}
+  term:"Sfumato – a way of painting with soft, smoky transitions between colours, without sharp outlines."},
+ durer:{f:"Art · Germany",
+  bio:"Albrecht Dürer was born in 1471 in Nuremberg, the son of a goldsmith who had come from Hungary. He first learned his father's craft, then trained with the painter Michael Wolgemut. He travelled to Italy twice, where he studied the work of Venetian painters and the new ideas about perspective and proportion. Back in Nuremberg he became famous across Europe, above all for his woodcuts and engravings, which could be printed many times and sold far away. He painted striking self-portraits, delicate watercolours of plants and animals, and wrote books on geometry and human proportions. He died in Nuremberg in 1528.",
+  facts:["He signed his works with a well-known monogram: a large letter A with a small letter D inside it.","His woodcut of a rhinoceros from 1515 was made without ever seeing the animal, only from a written description and a sketch.","His watercolour of a young hare, painted in 1502, is kept in the Albertina museum in Vienna."],
+  term:"Woodcut – a print made from a block of wood in which the parts that should stay white are cut away, leaving the lines raised to take the ink."},
+ copernicus:{f:"Astronomy · Poland",
+  bio:"Nicolaus Copernicus was born in 1473 in Toruń, in the Kingdom of Poland. He studied at the university in Kraków and later in Italy, in Bologna, Padua and Ferrara, where he earned a doctorate in church law. For most of his life he worked as a canon of the cathedral chapter of Warmia, living mainly in Frombork, and he was also a doctor, an administrator and an author on money. Through years of observations and calculations he developed the idea that the Earth and the other planets move around the Sun, and that the Earth turns on its axis every day. His great book, On the Revolutions of the Heavenly Spheres, was printed in Nuremberg in 1543, the year he died in Frombork.",
+  facts:["He wrote a treatise on coinage describing how bad money drives good money out of circulation, an idea later linked with the name of Thomas Gresham.","In 1520 and 1521 he organised the defence of Olsztyn Castle against the army of the Teutonic Knights.","The chemical element number one hundred and twelve, copernicium, is named after him."],
+  term:"Heliocentrism – the model of the universe in which the planets, including the Earth, orbit the Sun."}
 };

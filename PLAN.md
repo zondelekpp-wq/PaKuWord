@@ -18,7 +18,7 @@ Merge `dev` into `main`, set `PW_VERSION` to the release date, write the newest 
 ## Domain queue
 - [x] his – History
 - [x] mat – Mathematics
-- [ ] arc – Archaeology
+- [x] arc – Archaeology
 - [ ] cook – Cooking
 - [ ] art – Art
 - [ ] ast – Astronomy
@@ -58,11 +58,12 @@ Merge `dev` into `main`, set `PW_VERSION` to the release date, write the newest 
 - [ ] logic – Logic & critical thinking
 
 ## Status
-- Words: en 150, pl 150 (med 18, law 18, gen 18, psy 18, biz 18, his 30, mat 30)
-- Figure biographies: 14 / 50 (en, pl)
+- Words: en 210, pl 210 (med 24, law 24, gen 24, psy 24, biz 24, his 30, mat 30, arc 30)
+- Figure biographies: 16 / 50 (en, pl)
 - Other languages (de, es, fr, zh, uk, lv): interface ready, words fall back to English – planned later.
 
 ## Log
 - 2026-11-21 – v1: 5 domains, 30 words en + 30 pl, biographies 1–10, reading aloud, monthly updates. Released as 2026.11.21.
 - 2026-11-22 – new domain History (his, 30 words); +6 each to med, law, gen, psy, biz; 60 words en + 60 pl; biographies 11–12 (Gutenberg, Leonardo da Vinci).
 - 2026-11-23 – new domain Mathematics (mat, 30 words); +6 each to med, law, gen, psy, biz; 60 words en + 60 pl; biographies 13–14 (Albrecht Dürer, Nicolaus Copernicus).
+- 2026-11-24 – new domain Archaeology (arc, 30 words); +6 each to med, law, gen, psy, biz; 60 words en + 60 pl; biographies 15–16 (Miguel de Cervantes, Galileo Galilei).

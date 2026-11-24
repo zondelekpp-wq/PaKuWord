@@ -7,5 +7,6 @@ window.PW_CATS = {
  psy:{icon:"brain",n:{en:"Psychology",pl:"Psychologia",de:"Psychologie",es:"Psicología",fr:"Psychologie",zh:"心理学",uk:"Психологія",lv:"Psiholoģija"}},
  biz:{icon:"chart",n:{en:"Business",pl:"Biznes",de:"Wirtschaft",es:"Negocios",fr:"Affaires",zh:"商业",uk:"Бізнес",lv:"Bizness"}},
  his:{icon:"scroll",n:{en:"History",pl:"Historia",de:"Geschichte",es:"Historia",fr:"Histoire",zh:"历史",uk:"Історія",lv:"Vēsture"}},
- mat:{icon:"sigma",n:{en:"Mathematics",pl:"Matematyka",de:"Mathematik",es:"Matemáticas",fr:"Mathématiques",zh:"数学",uk:"Математика",lv:"Matemātika"}}
+ mat:{icon:"sigma",n:{en:"Mathematics",pl:"Matematyka",de:"Mathematik",es:"Matemáticas",fr:"Mathématiques",zh:"数学",uk:"Математика",lv:"Matemātika"}},
+ arc:{icon:"pyramid",n:{en:"Archaeology",pl:"Archeologia",de:"Archäologie",es:"Arqueología",fr:"Archéologie",zh:"考古学",uk:"Археологія",lv:"Arheoloģija"}}
 };

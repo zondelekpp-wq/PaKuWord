@@ -19,7 +19,7 @@ Merge `dev` into `main`, set `PW_VERSION` to the release date, write the newest 
 - [x] his – History
 - [x] mat – Mathematics
 - [x] arc – Archaeology
-- [ ] cook – Cooking
+- [x] cook – Cooking
 - [ ] art – Art
 - [ ] ast – Astronomy
 - [ ] phy – Physics
@@ -58,8 +58,8 @@ Merge `dev` into `main`, set `PW_VERSION` to the release date, write the newest 
 - [ ] logic – Logic & critical thinking
 
 ## Status
-- Words: en 210, pl 210 (med 24, law 24, gen 24, psy 24, biz 24, his 30, mat 30, arc 30)
-- Figure biographies: 16 / 50 (en, pl)
+- Words: en 270, pl 270 (med 30, law 30, gen 30, psy 30, biz 30, his 30, mat 30, arc 30, cook 30)
+- Figure biographies: 18 / 50 (en, pl)
 - Other languages (de, es, fr, zh, uk, lv): interface ready, words fall back to English – planned later.
 
 ## Log
@@ -67,3 +67,4 @@ Merge `dev` into `main`, set `PW_VERSION` to the release date, write the newest 
 - 2026-11-22 – new domain History (his, 30 words); +6 each to med, law, gen, psy, biz; 60 words en + 60 pl; biographies 11–12 (Gutenberg, Leonardo da Vinci).
 - 2026-11-23 – new domain Mathematics (mat, 30 words); +6 each to med, law, gen, psy, biz; 60 words en + 60 pl; biographies 13–14 (Albrecht Dürer, Nicolaus Copernicus).
 - 2026-11-24 – new domain Archaeology (arc, 30 words); +6 each to med, law, gen, psy, biz; 60 words en + 60 pl; biographies 15–16 (Miguel de Cervantes, Galileo Galilei).
+- 2026-11-25 – new domain Cooking (cook, 30 words); +6 each to med, law, gen, psy, biz; 60 words en + 60 pl; biographies 17–18 (William Shakespeare, Rembrandt).

@@ -20,7 +20,7 @@ Merge `dev` into `main`, set `PW_VERSION` to the release date, write the newest 
 - [x] mat – Mathematics
 - [x] arc – Archaeology
 - [x] cook – Cooking
-- [ ] art – Art
+- [x] art – Art
 - [ ] ast – Astronomy
 - [ ] phy – Physics
 - [ ] bio – Biology
@@ -58,8 +58,8 @@ Merge `dev` into `main`, set `PW_VERSION` to the release date, write the newest 
 - [ ] logic – Logic & critical thinking
 
 ## Status
-- Words: en 270, pl 270 (med 30, law 30, gen 30, psy 30, biz 30, his 30, mat 30, arc 30, cook 30)
-- Figure biographies: 18 / 50 (en, pl)
+- Words: en 330, pl 330 (med 36, law 36, gen 36, psy 36, biz 36, his 30, mat 30, arc 30, cook 30, art 30)
+- Figure biographies: 20 / 50 (en, pl)
 - Other languages (de, es, fr, zh, uk, lv): interface ready, words fall back to English – planned later.
 
 ## Log
@@ -68,3 +68,4 @@ Merge `dev` into `main`, set `PW_VERSION` to the release date, write the newest 
 - 2026-11-23 – new domain Mathematics (mat, 30 words); +6 each to med, law, gen, psy, biz; 60 words en + 60 pl; biographies 13–14 (Albrecht Dürer, Nicolaus Copernicus).
 - 2026-11-24 – new domain Archaeology (arc, 30 words); +6 each to med, law, gen, psy, biz; 60 words en + 60 pl; biographies 15–16 (Miguel de Cervantes, Galileo Galilei).
 - 2026-11-25 – new domain Cooking (cook, 30 words); +6 each to med, law, gen, psy, biz; 60 words en + 60 pl; biographies 17–18 (William Shakespeare, Rembrandt).
+- 2026-11-26 – new domain Art (art, 30 words); +6 each to med, law, gen, psy, biz; 60 words en + 60 pl; biographies 19–20 (Isaac Newton, Carl Linnaeus).

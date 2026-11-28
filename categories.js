@@ -11,5 +11,6 @@ window.PW_CATS = {
  arc:{icon:"pyramid",n:{en:"Archaeology",pl:"Archeologia",de:"Archäologie",es:"Arqueología",fr:"Archéologie",zh:"考古学",uk:"Археологія",lv:"Arheoloģija"}},
  cook:{icon:"pot",n:{en:"Cooking",pl:"Kuchnia i gotowanie",de:"Kochen",es:"Cocina",fr:"Cuisine",zh:"烹饪",uk:"Кулінарія",lv:"Kulinārija"}},
  art:{icon:"brush",n:{en:"Art",pl:"Sztuka",de:"Kunst",es:"Arte",fr:"Art",zh:"艺术",uk:"Мистецтво",lv:"Māksla"}},
- ast:{icon:"telescope",n:{en:"Astronomy",pl:"Astronomia",de:"Astronomie",es:"Astronomía",fr:"Astronomie",zh:"天文学",uk:"Астрономія",lv:"Astronomija"}}
+ ast:{icon:"telescope",n:{en:"Astronomy",pl:"Astronomia",de:"Astronomie",es:"Astronomía",fr:"Astronomie",zh:"天文学",uk:"Астрономія",lv:"Astronomija"}},
+ phy:{icon:"atom",n:{en:"Physics",pl:"Fizyka",de:"Physik",es:"Física",fr:"Physique",zh:"物理学",uk:"Фізика",lv:"Fizika"}}
 };

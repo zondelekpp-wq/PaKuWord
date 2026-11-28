@@ -22,7 +22,7 @@ Merge `dev` into `main`, set `PW_VERSION` to the release date, write the newest 
 - [x] cook – Cooking
 - [x] art – Art
 - [x] ast – Astronomy
-- [ ] phy – Physics
+- [x] phy – Physics
 - [ ] bio – Biology
 - [ ] chem – Chemistry
 - [ ] mus – Music
@@ -58,8 +58,8 @@ Merge `dev` into `main`, set `PW_VERSION` to the release date, write the newest 
 - [ ] logic – Logic & critical thinking
 
 ## Status
-- Words: en 390, pl 390 (med 36, law 36, gen 36, psy 36, biz 36, his 36, mat 36, arc 36, cook 36, art 36, ast 30)
-- Figure biographies: 22 / 50 (en, pl)
+- Words: en 450, pl 450 (med 42, law 42, gen 42, psy 42, biz 36, his 36, mat 36, arc 36, cook 36, art 36, ast 36, phy 30)
+- Figure biographies: 24 / 50 (en, pl)
 - Other languages (de, es, fr, zh, uk, lv): interface ready, words fall back to English – planned later.
 
 ## Log
@@ -70,3 +70,4 @@ Merge `dev` into `main`, set `PW_VERSION` to the release date, write the newest 
 - 2026-11-25 – new domain Cooking (cook, 30 words); +6 each to med, law, gen, psy, biz; 60 words en + 60 pl; biographies 17–18 (William Shakespeare, Rembrandt).
 - 2026-11-26 – new domain Art (art, 30 words); +6 each to med, law, gen, psy, biz; 60 words en + 60 pl; biographies 19–20 (Isaac Newton, Carl Linnaeus).
 - 2026-11-27 – new domain Astronomy (ast, 30 words); +6 each to his, mat, arc, cook, art; 60 words en + 60 pl; biographies 21–22 (Antoine Lavoisier, Wolfgang Amadeus Mozart).
+- 2026-11-28 – new domain Physics (phy, 30 words); +6 each to ast, med, law, gen, psy; 60 words en + 60 pl; biographies 23–24 (Alexander von Humboldt, Jane Austen).

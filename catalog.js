@@ -7,5 +7,6 @@
  "pack-2026-11-24-en.js","pack-2026-11-24-pl.js",
  "pack-2026-11-25-en.js","pack-2026-11-25-pl.js",
  "pack-2026-11-26-en.js","pack-2026-11-26-pl.js",
- "pack-2026-11-27-en.js","pack-2026-11-27-pl.js"
+ "pack-2026-11-27-en.js","pack-2026-11-27-pl.js",
+ "pack-2026-11-28-en.js","pack-2026-11-28-pl.js"
 ];
